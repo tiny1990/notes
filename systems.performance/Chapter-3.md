@@ -22,4 +22,18 @@
   系统调用fork()可以用写时拷贝(copy-on-write,COW)的策略来提高性能。添加原有地址空间的引用而非吧所有内容复制一遍。  
   一旦进程修改被引用的内存，就会针对修改创建独立的副本。
 
-## 
+# 虚拟内存
+  虚拟内存是内存的抽象，如果需要，操作系统可以将虚拟内存在主存和二级存储之间映射。
+<img src="../resources/systems.performance/c3-virtual-memory.png" width = "50%" />  
+
+# 调度器
+  unix是分时操作系统，通过划分执行时间，让多个进程同时运行，进程在处理器上和CPU时间的调度是通过调度器完成的。
+  <img src="../resources/systems.performance/c3-sheduler.png" width = "50%" />  
+
+# VFS
+  虚拟文件系统是一个对文件系统类型做抽象的内核界面
+<img src="../resources/systems.performance/c3-vfs.png" width = "50%" />  
+
+# I/O 栈
+<img src="../resources/systems.performance/c3-io-stack.png" width = "50%" />  
+
