@@ -20,6 +20,7 @@
 ## 进程的创建
   通常情况下进程通过系统调用fork()来创建。fork()用自己的进程号创建一个自身进程的一个复制，然后调用exec()才能开始执行命令。  
 ![进程创建](../resources/systems.performance/c3-create-process.png)
+<img src="../resources/systems.performance/c3-create-process.png" width = "100" height = "100" div align=center />
   系统调用fork()可以用写时拷贝(copy-on-write,COW)的策略来提高性能。添加原有地址空间的引用而非吧所有内容复制一遍。  
   一旦进程修改被引用的内存，就会针对修改创建独立的副本。
 
