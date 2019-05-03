@@ -42,15 +42,15 @@ System-wide tracing|tracepoints, kprobes, ftrace|
 ### /proc
 ```shell
 [root@host~]# ls -F /proc/19954/
-attr/      auxv    clear_refs  comm             cpuset  environ  fd/      io      loginuid  mem        mounts      net/  numa_maps  oom_score      pagemap      root@  schedstat  smaps  stat   status   task/
-autogroup  cgroup  cmdline     coredump_filter  cwd@    exe@     fdinfo/  limits  maps      mountinfo  mountstats  ns/   oom_adj    oom_score_adj  personality  sched  sessionid  stack  statm  syscall  wchan
+attr/      auxv    clear_refs  comm             cpuset  environ  fd/      gid_map  limits    map_files/  mem        mounts      net/  numa_maps  oom_score      pagemap      projid_map  sched      sessionid  smaps  stat   status   task/   uid_map
+autogroup  cgroup  cmdline     coredump_filter  cwd@    exe@     fdinfo/  io       loginuid  maps        mountinfo  mountstats  ns/   oom_adj    oom_score_adj  personality  root@       schedstat  setgroups  stack  statm  syscall  timers  wchan
 ```
-􏰀 limits: in-effect resource limits
-􏰀 maps: mapped memory regions
-􏰀 sched: various CPU scheduler statistics
-􏰀 schedstat: CPU runtime, latency, and time slices
-􏰀 smaps: mapped memory regions with usage statistics
-􏰀 stat: process status and statistics, including total CPU and memory usage
-􏰀 statm: memory usage summary in units of pages
-􏰀 status: stat and statm information, human-readable
-􏰀 task: directory of per-task statistics
+- limits: in-effect resource limits  
+- maps: mapped memory regions  
+- sched: various CPU scheduler statistics  
+- schedstat: CPU runtime, latency, and time slices  
+- smaps: mapped memory regions with usage statistics  
+- stat: process status and statistics, including total CPU and memory usage  
+- statm: memory usage summary in units of pages  
+- status: stat and statm information, human-readable  
+- task: directory of per-task statistics  
