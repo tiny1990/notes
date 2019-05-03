@@ -1,14 +1,13 @@
 # 内核
   主要管理:CPU调度，内存，文件系统，网络协议以及系统设备。
 
- ![操作系统内核角色](../resources/systems.performance/c3-core.png)
-
- 换上的缺口表示应用程序可以直接进行系统调用
+ <img src="../resources/systems.performance/c3-core.png" width = "50%" />  
+ 环上的缺口表示应用程序可以直接进行系统调用
 
  ## 内核态
    内核是唯一运行在特殊CPU模式的程序，这种特殊的CPU模式叫做内核态，在内核态下，设备的一切访问以及特权的执行都是被允许的。  
    由内核态控制设备的访问，以及支持多任务处理，除非明确允许，否则进程与用户之间的数据无法彼此访问。  
-![系统调用执行模式](../resources/systems.performance/c3-systemcall.png)
+<img src="../resources/systems.performance/c3-systemcall.png" width = "60%" />  
 
 # 进程
   进程是用以执行用户级别程序的环境。进程包括: 内存空间地址、文件描述符、线程栈和寄存器。  
@@ -19,8 +18,7 @@
 
 ## 进程的创建
   通常情况下进程通过系统调用fork()来创建。fork()用自己的进程号创建一个自身进程的一个复制，然后调用exec()才能开始执行命令。  
-![进程创建](../resources/systems.performance/c3-create-process.png)
-<img src="../resources/systems.performance/c3-create-process.png" width = "100" height = "100" div align=center />
+<img src="../resources/systems.performance/c3-create-process.png" width = "70%" />  
   系统调用fork()可以用写时拷贝(copy-on-write,COW)的策略来提高性能。添加原有地址空间的引用而非吧所有内容复制一遍。  
   一旦进程修改被引用的内存，就会针对修改创建独立的副本。
 
