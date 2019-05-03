@@ -28,13 +28,13 @@ These tools typically read statistics from the /proc file system.
 - perf: Linux Performance Events, tracing static and dynamic probes
 
 ## Observability Sources
-|------|------|
-|Type|Linux|
-|Per-process counters|/proc|
-|System-wide counters|/proc, /sys|
-|Device driver and debug info|/sys|
-|Per-process tracing|ptrace, uprobes|
+Type|Linux|
+-|-|
+Per-process counters|/proc|
+System-wide counters|/proc, /sys|
+Device driver and debug info|/sys|
+Per-process tracing|ptrace, uprobes|
 CPU performance counters|perf_event|
-|Network tracing|libpcap|
-|Per-thread latency metrics|delay accounting|
-|System-wide tracing|tracepoints, kprobes, ftrace|
+Network tracing|libpcap|
+Per-thread latency metrics|delay accounting|
+System-wide tracing|tracepoints, kprobes, ftrace|
