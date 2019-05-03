@@ -78,3 +78,42 @@ Linux 3.10.0-693.5.2.el7.jd_3311.x86_64 05/03/2019 	_x86_64_	(16 CPU)
 - %idle: 空闲
 
 
+#### pidstat
+```
+[root@TQNM ~]# pidstat 1
+Linux 3.10.0-693.5.2.el7.jd_3311.x86_64	05/03/2019 	_x86_64_	(16 CPU)
+
+06:25:16 PM   UID       PID    %usr %system  %guest    %CPU   CPU  Command
+06:25:17 PM     0       687    0.98    0.00    0.00    0.98     4  rsyslogd
+06:25:17 PM   596     69391    0.98    0.00    0.00    0.98     5  kube-scheduler
+06:25:17 PM     0    258986    0.00   11.76    0.00   11.76     4  java
+```
+
+#### time ptime
+```
+$ /usr/bin/time -v cp fileA fileB
+    Command being timed: "cp fileA fileB"
+    User time (seconds): 0.00
+    System time (seconds): 0.26
+    Percent of CPU this job got: 24%
+    Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.08
+    Average shared text size (kbytes): 0
+    Average unshared data size (kbytes): 0
+    Average stack size (kbytes): 0
+    Average total size (kbytes): 0
+    Maximum resident set size (kbytes): 3792
+    Average resident set size (kbytes): 0
+    Major (requiring I/O) page faults: 0
+    Minor (reclaiming a frame) page faults: 294
+    Voluntary context switches: 1082
+    Involuntary context switches: 1
+    Swaps: 0
+    File system inputs: 275432
+    File system outputs: 275432
+    Socket messages sent: 0
+    Socket messages received: 0
+    Signals delivered: 0
+    Page size (bytes): 4096
+    Exit status: 0
+```
+> time -v 一般不在shell提供
