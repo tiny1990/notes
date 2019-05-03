@@ -31,7 +31,7 @@
   <img src="../resources/systems.performance/c3-sheduler.png" width = "50%" />  
 
 # VFS
-  虚拟文件系统是一个对文件系统类型做抽象的内核界面
+  虚拟文件系统是一个对文件系统类型做抽象的内核界面  
 <img src="../resources/systems.performance/c3-vfs.png" width = "50%" />  
 
 # I/O 栈
