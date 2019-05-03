@@ -27,3 +27,14 @@ These tools typically read statistics from the /proc file system.
 - SystemTap: tracing of kernel internals and the usage of any resource, using static and dynamic tracing
 - perf: Linux Performance Events, tracing static and dynamic probes
 
+## Observability Sources
+|------|------|
+|Type|Linux|
+|Per-process counters|/proc|
+|System-wide counters|/proc, /sys|
+|Device driver and debug info|/sys|
+|Per-process tracing|ptrace, uprobes|
+CPU performance counters|perf_event|
+|Network tracing|libpcap|
+|Per-thread latency metrics|delay accounting|
+|System-wide tracing|tracepoints, kprobes, ftrace|
