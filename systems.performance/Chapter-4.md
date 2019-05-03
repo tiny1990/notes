@@ -54,3 +54,23 @@ autogroup  cgroup  cmdline     coredump_filter  cwd@    exe@     fdinfo/  io    
 - statm: memory usage summary in units of pages  
 - status: stat and statm information, human-readable  
 - task: directory of per-task statistics  
+
+```shell
+[root@host~ proc]# ls -Fd [a-z]*
+acpi/      cgroups   cpuinfo  diskstats  execdomains  fs/         ioports  kallsyms   keys        kpageflags  mdstat   modules  net@          sched_debug  self@     stat   sysrq-trigger  timer_stats  version      zoneinfo
+buddyinfo  cmdline   crypto   dma        fb           interrupts  ipmi/    kcore      kmsg        loadavg     meminfo  mounts@  pagetypeinfo  schedstat    slabinfo  swaps  sysvipc/       tty/         vmallocinfo
+bus/       consoles  devices  driver/    filesystems  iomem       irq/     key-users  kpagecount  locks       misc     mtrr     partitions    scsi/        softirqs  sys/   timer_list     uptime       vmstat
+```
+
+- cpuinfo: physical processor information, including every virtual CPU, model name, clock speed, and cache sizes.  
+- diskstats: disk I/O statistics for all disk devices  
+- interrupts: interrupt counters per CPU  
+- loadavg: load averages  
+- meminfo: system memory usage breakdowns  
+- net/dev: network interface statistics  
+- net/tcp: active TCP socket information  
+- schedstat: system-wide CPU scheduler statistics  
+- self: a symlink to the current process ID directory, for convenience  
+- slabinfo: kernel slab allocator cache statistics  
+- stat: a summary of kernel and system resource statistics: CPUs, disks, pag- ing, swap, processes  
+- zoneinfo: memory zone information  
